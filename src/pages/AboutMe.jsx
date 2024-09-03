@@ -25,8 +25,8 @@ function AboutMe() {
      <br />
 
       <img src={myPicture} alt="My Picture" className="rounded-circle mb-4" style={{ width: '150px', height: '150px' }} />
-      <h1 className="mb-3">Ye Myat Moe</h1>
-      <h3 className="text-muted mb-5">Software Engineer</h3>
+      <h2 className="mb-2">Ye Myat Moe</h2>
+      <h4 className="text-muted mb-4">Software Engineer</h4>
       <div className="d-flex justify-content-center mb-4">
         <a href="https://github.com/yemyat144" className="mx-3" aria-label="GitHub"><FaGithub size={28} /></a>
         <a href="https://linkedin.com" className="mx-3" aria-label="LinkedIn"><FaLinkedin size={29} /></a>
