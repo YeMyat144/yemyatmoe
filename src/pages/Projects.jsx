@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './main.css';
 
 function Projects() {
   const projectData = [
@@ -15,25 +14,23 @@ function Projects() {
 
   return (
     <div className="container mt-3">
-      <div className="d-flex justify-content-center mb-4">
+      <div className="d-flex justify-content-center mb-4">  
       <nav className="navbar navbar-expand-lg navbar-light mb-4">  
-      <div className="radio-inputs">
-  <label className="radio">
-    <input type="radio" name="radio" checked=""/>
-    <Link className="nav-link" to="/">Me</Link> 
-  </label>
-  <label className="radio">
-    <input type="radio" name="radio"/>
-    <Link className="nav-link" to="/projects">Projects</Link> 
-  </label>
-      
-  <label className="radio">
-    <input type="radio" name="radio"/>
-    <Link className="nav-link" to="/contact">Contact</Link>
-  </label>
+        <div className="navbar-collapse justify-content-center">  
+          <ul className="navbar-nav">  
+            <li className="nav-item">  
+              <Link className="nav-link" to="/">Me</Link>  
+            </li>  
+            <li className="nav-item">  
+              <Link className="nav-link" to="/projects">Projects</Link>  
+            </li>  
+            <li className="nav-item">  
+              <Link className="nav-link" to="/contact">Contact</Link>  
+            </li>  
+          </ul>  
+        </div>  
+      </nav>
 </div>
-</nav>
-      </div>
 
       
       <h1 className="text-center mb-4">My Projects</h1>
