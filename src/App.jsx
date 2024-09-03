@@ -1,34 +1,20 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Footer from './components/Footer';
-import NavMenu from './components/NavMenu';
-import ScrollToTop from './components/ScrollToTop';
-import About from './pages/About';
+import './App.css';
 import Contact from './pages/Contact';
-import Home from './pages/Home';
+// import Footer from './pages/Footer';
+import Hero from './pages/Hero';
 import Projects from './pages/Projects';
+import Skills from './pages/Skills';
 
-export default function App() {
+function App() {
   return (
     <>
-      <Router>
-        <NavMenu />
-        <ScrollToTop />
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-          <Route path="/projects">
-            <Projects />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-        <Footer />
-      </Router>
+      <Hero />
+      <Projects />
+      <Skills />
+      <Contact />
+      {/* <Footer /> */}
     </>
-  );}
+  );
+}
+
+export default App;
