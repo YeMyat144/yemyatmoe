@@ -4,8 +4,8 @@ import sun from '../../assets/sun.svg';
 import moon from '../../assets/moon.svg';
 import instagramLight from '../../assets/instagram-light.svg';
 import instagramDark from '../../assets/instagram-dark.svg';
-import facebookLight from '../../assets/facebook-light.svg';
-import facebookDark from '../../assets/facebook-dark.svg';
+import githubLight from '../../assets/github-light.svg';
+import githubDark from '../../assets/github-dark.svg';
 import linkedinLight from '../../assets/linkedin-light.svg';
 import linkedinDark from '../../assets/linkedin-dark.svg';
 import CV from '../../assets/cv.pdf';
@@ -16,7 +16,7 @@ function Hero() {
 
   const themeIcon = theme === 'light' ? sun : moon;
   const instagramIcon = theme === 'light' ? instagramLight : instagramDark;
-  const facebookIcon = theme === 'light' ? facebookLight : facebookDark;
+  const githubIcon = theme === 'light' ? githubLight : githubDark;
   const linkedinIcon = theme === 'light' ? linkedinLight : linkedinDark;
 
   return (
@@ -42,13 +42,13 @@ function Hero() {
         </h1>
         <h2>Software Engineer</h2>
         <span>
-          <a href="https://instagram.com/" target="_blank">
+          <a href="https://instagram.com/dest_voyage_" target="_blank">
             <img src={instagramIcon} alt="Instagram icon" />
           </a>
-          <a href="https://facebook.com/" target="_blank">
-            <img src={facebookIcon} alt="Facebook icon" />
+          <a href="https://github.com/YeMyat144" target="_blank">
+            <img src={githubIcon} alt="github icon" />
           </a>
-          <a href="https://linkedin.com/" target="_blank">
+          <a href="https://www.linkedin.com/in/ye-myat-moe-2a6105230/" target="_blank">
             <img src={linkedinIcon} alt="Linkedin icon" />
           </a>
         </span>
