@@ -1,9 +1,29 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Contact() {
   return (
-    <div className="container mt-5">
+    <div className="container mt-3">
+      <div className="d-flex justify-content-center mb-4">
+        <nav className="navbar navbar-expand-lg navbar-light">  
+          <div className="navbar-collapse justify-content-center">  
+            <ul className="navbar-nav">  
+              <li className="nav-item">  
+                <Link className="nav-link" to="/">Me</Link>  
+              </li>  
+              <li className="nav-item">  
+                <Link className="nav-link" to="/projects">Projects</Link>  
+              </li>  
+              <li className="nav-item">  
+                <Link className="nav-link" to="/contact">Contact</Link>  
+              </li>  
+            </ul>  
+          </div>  
+        </nav>
+      </div>
+
       <h1 className="text-center mb-4">Contact Me</h1>
+      
       <form className="mx-auto" style={{ maxWidth: '600px' }}>
         <div className="form-group mb-3">
           <label htmlFor="name">Name</label>
