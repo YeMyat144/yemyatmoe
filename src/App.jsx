@@ -1,19 +1,29 @@
 import './App.css';
-import Contact from './pages/Contact';
-// import Footer from './pages/Footer';
-import Hero from './pages/Hero';
-import Projects from './pages/Projects';
-import Skills from './pages/Skills';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import Contact from './sections/Contact/Contact';
+import Hero from './sections/Hero/Hero';
+import Projects from './sections/Projects/Projects';
+import Skills from './sections/Skills/Skills';
 
 function App() {
   return (
-    <>
-      <Hero />
-      <Projects />
-      <Skills />
-      <Contact />
-      {/* <Footer /> */}
-    </>
+    <Router>
+      <nav>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/projects">Projects</Link></li>
+          <li><Link to="/skills">Skills</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
+        </ul>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Hero />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
   );
 }
 
