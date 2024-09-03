@@ -3,24 +3,34 @@ import { FaGithub, FaInstagram, FaLinkedin, FaKaggle, FaResearchgate } from 'rea
 import myPicture from '../assets/hero-img.png'; 
 import resumeFile from '../assets/cv.pdf'; 
 import { Link } from 'react-router-dom';
+import './main.css';
 function AboutMe() {
   return (
     <div className="text-center mt-3">
+      <div className="d-flex justify-content-center mb-4">
       <nav className="navbar navbar-expand-lg navbar-light mb-4">  
-        <div className="navbar-collapse justify-content-center">  
-          <ul className="navbar-nav">  
-            <li className="nav-item">  
-              <Link className="nav-link" to="/">Me</Link>  
-            </li>  
-            <li className="nav-item">  
-              <Link className="nav-link" to="/projects">Projects</Link>  
-            </li>  
-            <li className="nav-item">  
-              <Link className="nav-link" to="/contact">Contact</Link>  
-            </li>  
-          </ul>  
-        </div>  
-      </nav>
+      <div className="radio-inputs">
+  <label className="radio">
+    <input type="radio" name="radio" checked=""/>
+    <Link className="nav-link" to="/">Me</Link> 
+  </label>
+  <label className="radio">
+    <input type="radio" name="radio"/>
+    <Link className="nav-link" to="/projects">Projects</Link> 
+  </label>
+      
+  <label className="radio">
+    <input type="radio" name="radio"/>
+    <Link className="nav-link" to="/contact">Contact</Link>
+  </label>
+</div>
+</nav>
+      </div>
+
+      
+
+
+  
      <br />
      <br />
 
