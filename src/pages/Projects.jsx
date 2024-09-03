@@ -2,10 +2,13 @@ import React from 'react';
 
 function Projects() {
   const projectData = [
-    { name: 'Project One', description: 'Description of Project One', repoLink: 'https://github.com/yourusername/project-one' },
-    { name: 'Project Two', description: 'Description of Project Two', repoLink: 'https://github.com/yourusername/project-two' },
-    { name: 'Project Three', description: 'Description of Project Three', repoLink: 'https://github.com/yourusername/project-three' },
-    // Add more projects as needed
+    { name: 'Vitrual Keyboard', description: 'A virtual keyboard controlled hand gesture controls using Python', repoLink: 'https://github.com/YeMyat144/virtual_keyboard' },
+    { name: 'Face Landmark Detection', description: 'A real-time facial landmark detection system using TensorFlow.js', repoLink: 'https://github.com/YeMyat144/facemesh' },
+    { name: 'Gallery', description: 'Use Electron to build a gallery cross-platform application', repoLink: 'https://github.com/YeMyat144/Electron_Gallery' },
+    { name: 'ToDo List', description: 'Pracice Vue with a task list website', repoLink: 'https://github.com/YeMyat144/todo-list' },
+    { name: 'Yolo', description: 'An ecommerce website ', repoLink: 'https://github.com/yourusername/project-three' },
+    { name: 'HangMan Game', description: 'A finding word game using typescript', repoLink: 'https://github.com/YeMyat144/Typescript' },
+    { name: 'Yolo', description: 'An ecommerce website browsing products, a shopping cart for managing selections', repoLink: 'https://github.com/yourusername/project-three' },
   ];
 
   return (
