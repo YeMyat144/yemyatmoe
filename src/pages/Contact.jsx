@@ -3,24 +3,27 @@ import { Link } from 'react-router-dom';
 
 function Contact() {
   return (
-    <div className="container mt-3">
-      <div className="d-flex justify-content-center mb-4">  
-      <nav className="navbar navbar-expand-lg navbar-light mb-4">  
-        <div className="navbar-collapse justify-content-center">  
-          <ul className="navbar-nav">  
-            <li className="nav-item">  
-              <Link className="nav-link" to="/">Me</Link>  
-            </li>  
-            <li className="nav-item">  
-              <Link className="nav-link" to="/projects">Projects</Link>  
-            </li>  
-            <li className="nav-item">  
-              <Link className="nav-link" to="/contact">Contact</Link>  
-            </li>  
-          </ul>  
-        </div>  
+    <div className="container mt-4">
+      <nav className="navbar navbar-expand-lg navbar-light mb-4">
+        <div className="container-fluid">
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <Link className="nav-link" to="/">Me</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/projects">Projects</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/contact">Contact</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
-</div>
 
       <h1 className="text-center mb-4">Contact Me</h1>
       
