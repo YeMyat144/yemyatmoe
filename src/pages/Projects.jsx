@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function Projects() {
   const projectData = [
@@ -13,12 +15,9 @@ function Projects() {
   ];
 
   return (
-    <div className="container text-center mt-4">
+    <div className="container mt-4">
       <nav className="navbar navbar-expand-lg navbar-light mb-4">
-        <div className="container-fluid">
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
+         
           <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
@@ -32,7 +31,7 @@ function Projects() {
               </li>
             </ul>
           </div>
-        </div>
+        
       </nav>
       
       <h1 className="text-center mb-4">My Projects</h1>
