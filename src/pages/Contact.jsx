@@ -6,8 +6,19 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 function Contact() {
   return (
     <div className="container mt-4">
-      <nav className="navbar navbar-expand-lg navbar-light mb-4">
-        
+      <nav className="navbar navbar-expand-lg navbar-light mb-4 text-center">
+      <div className="container-fluid">
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
           <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
@@ -21,7 +32,7 @@ function Contact() {
               </li>
             </ul>
           </div>
-        
+        </div>
       </nav>
 
       <h1 className="text-center mb-4">Contact Me</h1>
