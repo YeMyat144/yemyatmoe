@@ -25,13 +25,13 @@ function AboutMe() {
           <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className="nav-link" to="/">Me</Link>
+                <Link className="nav-link text-primary" to="/">Me</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/projects">Projects</Link>
+                <Link className="nav-link text-primary" to="/projects">Projects</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/contact">Contact</Link>
+                <Link className="nav-link text-primary" to="/contact">Contact</Link>
               </li>
             </ul>
           </div>
@@ -39,8 +39,8 @@ function AboutMe() {
       </nav>
 
       <img src={myPicture} alt="My Picture" className="rounded-circle mb-4" style={{ width: '150px', height: '150px' }} />
-      <h2 className="mb-2">Ye Myat Moe</h2>
-      <h4 className="text-muted mb-4">Software Engineer</h4>
+      <h2 className="text-muted mb-2">Ye Myat Moe</h2>
+      <h5 className="text-muted mb-4">Web Developer</h5>
       <div className="d-flex justify-content-center mb-4">
         <a href="https://github.com/yemyat144" className="mx-3" aria-label="GitHub"><FaGithub size={28} /></a>
         <a href="https://linkedin.com" className="mx-3" aria-label="LinkedIn"><FaLinkedin size={29} /></a>

@@ -38,13 +38,13 @@ function Contact() {
           <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className="nav-link" to="/">Me</Link>
+                <Link className="nav-link text-primary" to="/">Me</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/projects">Projects</Link>
+                <Link className="nav-link text-primary" to="/projects">Projects</Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/contact">Contact</Link>
+              <li className="nav-item"> 
+                <Link className="nav-link text-primary" to="/contact">Contact</Link>
               </li>
             </ul>
           </div>
