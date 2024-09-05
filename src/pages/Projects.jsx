@@ -45,7 +45,7 @@ function Projects() {
         </div>
       </nav>
       
-      <h1 className="text-center mb-4">My Projects</h1>
+      <h2 className="text-center mb-4">My Projects</h2>
       
       <table className="table table-hover">
         <thead>
