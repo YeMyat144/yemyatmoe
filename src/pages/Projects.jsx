@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { AppBar, Toolbar, IconButton, Typography, Link as MuiLink, Container, Table, TableBody, TableFooter, TableCell, TableContainer, TableHead, TableRow, Paper, Button, Box, Drawer, List, ListItem, ListItemText, useMediaQuery } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import logo from '../assets/temp.png';
+import { CenterFocusStrong } from '@mui/icons-material';
 
 function Projects() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -77,7 +78,7 @@ function Projects() {
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell><Typography variant="h6">Project Name</Typography></TableCell>
+              <TableCell><Typography variant="h6">Name</Typography></TableCell>
               <TableCell><Typography variant="h6">Description</Typography></TableCell>
               <TableCell align="center"><Typography variant="h6">Repository</Typography></TableCell>
             </TableRow>

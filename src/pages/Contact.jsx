@@ -80,7 +80,7 @@ function Contact() {
       </Drawer>
 
       {/* Contact Form */}
-      <Typography variant="h4" align="center" gutterBottom>Contact Me</Typography>
+      <Typography variant="h4" align="center" gutterBottom>Get in Touch</Typography>
 
       <form ref={form} onSubmit={sendEmail} noValidate autoComplete="off">
         <Box
