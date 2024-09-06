@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import { AppBar, Toolbar,IconButton, Typography, Link as MuiLink, Container, Table, TableBody, TableFooter, TableCell, TableContainer, TableHead, TableRow, Paper, Button, Box } from '@mui/material';
+import logo from '../assets/temp.png';
 
 function Projects() {
   const projectData = [
@@ -15,64 +15,81 @@ function Projects() {
   ];
 
   return (
-    <div className="container mt-4">
-      <nav className="navbar navbar-expand-lg navbar-light mb-4 text-center">
-      <div className="container-fluid">
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button> 
-          <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <Link className="nav-link text-primary"  to="/">Me</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link text-primary" to="/projects">Projects</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link text-primary" to="/contact">Contact</Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+    <Container sx={{ mt: 4 }}>
+      {/* Navigation */}
+      <AppBar position="static" color="transparent" sx={{ mb: 5 }}>
+      <Toolbar sx={{ justifyContent: 'space-between' }}>
+        {/* Logo Section */}
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          <IconButton component={Link} to="/" sx={{ p: 0 }}>
+            <img src={logo} alt="Logo" style={{ width: 35, height: 35 }} /> {/* Adjust the height as needed */}
+          </IconButton>
+        </Box>
+
+        {/* Navigation Links */}
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          <MuiLink component={Link} to="/" sx={{ mx: 2, color: 'black', textDecoration: 'none' }}>
+            <Typography variant="h6">Me</Typography>
+          </MuiLink>
+          <MuiLink component={Link} to="/projects" sx={{ mx: 2, color: 'black', textDecoration: 'none' }}>
+            <Typography variant="h6">Projects</Typography>
+          </MuiLink>
+          <MuiLink component={Link} to="/contact" sx={{ mx: 2, color: 'black', textDecoration: 'none' }}>
+            <Typography variant="h6">Contact</Typography>
+          </MuiLink>
+        </Box>
+      </Toolbar>
+    </AppBar>
+
+      {/* Projects Table */}
+      <Typography variant="h4" align="center" gutterBottom>My Projects</Typography>
       
-      <h2 className="text-center mb-4">My Projects</h2>
-      
-      <table className="table table-hover">
-        <thead>
-          <tr>
-            <th scope="col">Project Name</th>
-            <th scope="col">Description</th>
-            <th scope="col" className="text-center">Repository</th>
-          </tr>
-        </thead>
-        <tbody>
-          {projectData.map((project, index) => (
-            <tr key={index}>
-              <td>{project.name}</td>
-              <td>{project.description}</td>
-              <td className="text-center">
-                <a href={project.repoLink} className="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">Link</a>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colSpan="3" className="text-center text-muted">Coming soon...</td>
-          </tr>
-        </tfoot>
-      </table>
-    </div>
+      <TableContainer component={Paper} sx={{ boxShadow: 3 }}>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell><Typography variant="h6">Project Name</Typography></TableCell>
+              <TableCell><Typography variant="h6">Description</Typography></TableCell>
+              <TableCell align="center"><Typography variant="h6">Repository</Typography></TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {projectData.map((project, index) => (
+              <TableRow key={index}>
+                <TableCell>{project.name}</TableCell>
+                <TableCell>{project.description}</TableCell>
+                <TableCell align="center">
+                  <Button
+                    variant="outlined" 
+                    component="a"
+                    href={project.repoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{   
+                      borderColor: 'black', // Custom border color  
+                      color: 'black', // Custom text color  
+                      '&:hover': {  
+                        borderColor: 'darkgrey', // Change border color on hover  
+                        color: 'darkgrey', // Change text color on hover  
+                      }  
+                    }}  
+                  >
+                    Link
+                  </Button>
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+          <TableFooter>
+            <TableRow>
+              <TableCell colSpan={3} align="center" sx={{ py: 3, color: 'text.secondary' }}>
+                <Typography variant="body2">Coming soon...</Typography>
+              </TableCell>
+            </TableRow>
+          </TableFooter>
+        </Table>
+      </TableContainer>
+    </Container>
   );
 }
 
