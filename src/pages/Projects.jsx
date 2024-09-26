@@ -18,7 +18,7 @@ function Projects() {
   ];
 
   return (
-    <Container sx={{ mt: 4 }}>
+    <Container>
       <Header />
 
       <Typography variant="h4" align="center" gutterBottom>

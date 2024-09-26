@@ -7,6 +7,7 @@ import { useTheme } from '@mui/material/styles';
 import logo from '../assets/temp.png';
 import theme from './theme';
 import Footer from './Footer';
+import Header from './Header';
 
 function Contact() {
   const form = useRef();
@@ -29,53 +30,8 @@ function Contact() {
   };
 
   return (
-    <Container sx={{ mt: 4 }}>
-      <AppBar position="static" color="transparent" sx={{ mb: 5 }}>
-        <Toolbar sx={{ justifyContent: 'space-between' }}>
-          <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            <IconButton component={Link} to="/" sx={{ p: 0 }}>
-              <img src={logo} alt="Logo" style={{ width: 35, height: 35 }} />
-            </IconButton>
-          </Box>
-
-          {isMobile ? (
-            <IconButton
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              onClick={toggleDrawer}
-            >
-              <MenuIcon />
-            </IconButton>
-          ) : (
-            <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <MuiLink component={Link} to="/" sx={{ mx: 2, color: theme.palette.text.primary, textDecoration: 'none' }}>
-                <Typography variant="h6">Me</Typography>
-              </MuiLink>
-              <MuiLink component={Link} to="/projects" sx={{ mx: 2, color: theme.palette.text.primary, textDecoration: 'none' }}>
-                <Typography variant="h6">Projects</Typography>
-              </MuiLink>
-              <MuiLink component={Link} to="/contact" sx={{ mx: 2, color: theme.palette.text.primary, textDecoration: 'none' }}>
-                <Typography variant="h6">Contact</Typography>
-              </MuiLink>
-            </Box>
-          )}
-        </Toolbar>
-      </AppBar>
-
-      <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer}>
-        <List>
-          <ListItem button component={Link} to="/" onClick={toggleDrawer}>
-            <ListItemText primary="Me" sx={{ color: theme.palette.text.primary }} />
-          </ListItem>
-          <ListItem button component={Link} to="/projects" onClick={toggleDrawer}>
-            <ListItemText primary="Projects" sx={{ color: theme.palette.text.primary }} />
-          </ListItem>
-          <ListItem button component={Link} to="/contact" onClick={toggleDrawer}>
-            <ListItemText primary="Contact" sx={{ color: theme.palette.text.primary }} />
-          </ListItem>
-        </List>
-      </Drawer>
+    <Container>
+      <Header/>
 
       <Typography variant="h4" align="center" gutterBottom>Get in Touch</Typography>
 

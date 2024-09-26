@@ -21,15 +21,6 @@ const Footer = () => {
       <Typography variant="body2" gutterBottom>
         © {new Date().getFullYear()} Ye Myat Moe. All rights reserved.
       </Typography>
-      <Typography variant="body2" gutterBottom>
-        <MuiLink href="/privacy-policy" sx={{ color: theme.palette.text.secondary, textDecoration: 'none', mx: 1 }}>
-          Privacy Policy
-        </MuiLink>
-        |
-        <MuiLink href="/terms-of-service" sx={{ color: theme.palette.text.secondary, textDecoration: 'none', mx: 1 }}>
-          Terms of Service
-        </MuiLink>
-      </Typography>
     </Box>
   );
 };

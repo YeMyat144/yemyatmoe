@@ -11,8 +11,7 @@ import Footer from './Footer';
 function AboutMe() {
 
   return (
-    <>
-    <Container sx={{ mt: 4 }}>
+    <Container >
       <Header />
 
       <Container maxWidth="md" sx={{ mt: 4, textAlign: 'center' }}>
@@ -64,7 +63,6 @@ function AboutMe() {
         <Footer/>
       </Container>
       </Container>
-    </>
   );
 }
 

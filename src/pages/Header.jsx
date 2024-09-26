@@ -16,8 +16,8 @@ const Header = () => {
 
   return (
     <>
-      <AppBar position="static" color="transparent" sx={{ mb: 5 }}>
-        <Toolbar sx={{ justifyContent: 'space-between' }}>
+      <AppBar position="static" color="transparent" sx={{ mb: 5}}>  
+        <Toolbar sx={{ justifyContent: 'space-between' }}>  
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <IconButton component={Link} to="/" sx={{ p: 0 }}>
               <img src={logo} alt="Logo" style={{ width: 35, height: 35 }} />
@@ -48,20 +48,6 @@ const Header = () => {
           )}
         </Toolbar>
       </AppBar>
-
-      <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer}>
-        <List>
-          <ListItem button component={Link} to="/" onClick={toggleDrawer}>
-            <ListItemText primary="Me" sx={{ color: theme.palette.text.primary }} />
-          </ListItem>
-          <ListItem button component={Link} to="/projects" onClick={toggleDrawer}>
-            <ListItemText primary="Projects" sx={{ color: theme.palette.text.primary }} />
-          </ListItem>
-          <ListItem button component={Link} to="/contact" onClick={toggleDrawer}>
-            <ListItemText primary="Contact" sx={{ color: theme.palette.text.primary }} />
-          </ListItem>
-        </List>
-      </Drawer>
     </>
   );
 };
