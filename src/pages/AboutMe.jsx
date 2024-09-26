@@ -1,71 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Container, Typography, Box, Avatar, IconButton, Button } from '@mui/material';
 import { FaGithub, FaInstagram, FaLinkedin, FaKaggle, FaResearchgate } from 'react-icons/fa';
-import { AppBar, Toolbar, Typography, Container, Avatar, IconButton, Button, Box, Link as MuiLink, Drawer, List, ListItem, ListItemText, useMediaQuery } from '@mui/material';
-import { Link } from 'react-router-dom';
-import MenuIcon from '@mui/icons-material/Menu';
+import Header from './Header';
 import { useTheme } from '@mui/material/styles';
 import myPicture from '../assets/hero-img.png';
 import resumeFile from '../assets/cv.pdf';
-import logo from '../assets/temp.png';
+import theme from './theme';
+import Footer from './Footer';
 
 function AboutMe() {
-  const [drawerOpen, setDrawerOpen] = useState(false);
-  const isMobile = useMediaQuery('(max-width:600px)');
-  const theme = useTheme(); // Access the theme
-
-  const toggleDrawer = () => {
-    setDrawerOpen(!drawerOpen);
-  };
 
   return (
+    <>
     <Container sx={{ mt: 4 }}>
-      {/* AppBar with responsive navigation */}
-      <AppBar position="static" color="transparent" sx={{ mb: 5 }}>
-        <Toolbar sx={{ justifyContent: 'space-between' }}>
-          {/* Logo */}
-          <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            <IconButton component={Link} to="/" sx={{ p: 0 }}>
-              <img src={logo} alt="Logo" style={{ width: 35, height: 35 }} />
-            </IconButton>
-          </Box>
+      <Header />
 
-          {/* Desktop and Mobile Navigation */}
-          {isMobile ? (
-            <IconButton edge="start" color="inherit" aria-label="menu" onClick={toggleDrawer}>
-              <MenuIcon />
-            </IconButton>
-          ) : (
-            <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <MuiLink component={Link} to="/" sx={{ mx: 2, color: theme.palette.text.primary, textDecoration: 'none' }}>
-                <Typography variant="h6">Me</Typography>
-              </MuiLink>
-              <MuiLink component={Link} to="/projects" sx={{ mx: 2, color: theme.palette.text.primary, textDecoration: 'none' }}>
-                <Typography variant="h6">Projects</Typography>
-              </MuiLink>
-              <MuiLink component={Link} to="/contact" sx={{ mx: 2, color: theme.palette.text.primary, textDecoration: 'none' }}>
-                <Typography variant="h6">Contact</Typography>
-              </MuiLink>
-            </Box>
-          )}
-        </Toolbar>
-      </AppBar>
-
-      {/* Drawer for mobile navigation */}
-      <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer}>
-        <List>
-          <ListItem button component={Link} to="/" onClick={toggleDrawer}>
-            <ListItemText primary="Me" sx={{ color: theme.palette.text.primary }} />
-          </ListItem>
-          <ListItem button component={Link} to="/projects" onClick={toggleDrawer}>
-            <ListItemText primary="Projects" sx={{ color: theme.palette.text.primary }} />
-          </ListItem>
-          <ListItem button component={Link} to="/contact" onClick={toggleDrawer}>
-            <ListItemText primary="Contact" sx={{ color: theme.palette.text.primary }} />
-          </ListItem>
-        </List>
-      </Drawer>
-
-      {/* About Me Section */}
       <Container maxWidth="md" sx={{ mt: 4, textAlign: 'center' }}>
         <Avatar src={myPicture} alt="My Picture" sx={{ width: 150, height: 150, mx: 'auto', mb: 4 }} />
         <Typography variant="h4" component="h2" color="text.dark" gutterBottom sx={{ width: 200, mx: 'auto', mb: 4 }}>
@@ -76,7 +25,6 @@ function AboutMe() {
           </Typography>
         </Typography>
 
-        {/* Social Links */}
         <Box sx={{ display: 'flex', justifyContent: 'center', mb: 4 }}>
           <IconButton href="https://github.com/yemyat144" aria-label="GitHub">
             <FaGithub size={28} style={{ color: theme.palette.text.primary }} />
@@ -95,7 +43,6 @@ function AboutMe() {
           </IconButton>
         </Box>
 
-        {/* Resume Button */}
         <Button
           variant="contained"
           size="large"
@@ -114,8 +61,10 @@ function AboutMe() {
         >
           Download Resume
         </Button>
+        <Footer/>
       </Container>
-    </Container>
+      </Container>
+    </>
   );
 }
 

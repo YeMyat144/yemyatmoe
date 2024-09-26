@@ -3,24 +3,23 @@ import emailjs from 'emailjs-com';
 import { Link } from 'react-router-dom';
 import { Container, TextField, Button, Typography, Box, AppBar, IconButton, Toolbar, Link as MuiLink, Drawer, List, ListItem, ListItemText, useMediaQuery } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import { useTheme } from '@mui/material/styles'; // Import useTheme hook
+import { useTheme } from '@mui/material/styles';
 import logo from '../assets/temp.png';
+import theme from './theme';
+import Footer from './Footer';
 
 function Contact() {
   const form = useRef();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const isMobile = useMediaQuery('(max-width:600px)');
-  const theme = useTheme(); // Access the theme
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs.sendForm('service_til6i7c', 'template_s9okbkh', form.current, 'ZT3etSjViZ5HA5CJT')
       .then((result) => {
-        console.log(result.text);
         alert('Message sent successfully!');
       }, (error) => {
-        console.log(error.text);
         alert('Failed to send message. Please try again later.');
       });
   };
@@ -31,10 +30,8 @@ function Contact() {
 
   return (
     <Container sx={{ mt: 4 }}>
-      {/* Navigation */}
       <AppBar position="static" color="transparent" sx={{ mb: 5 }}>
         <Toolbar sx={{ justifyContent: 'space-between' }}>
-          {/* Logo Section */}
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <IconButton component={Link} to="/" sx={{ p: 0 }}>
               <img src={logo} alt="Logo" style={{ width: 35, height: 35 }} />
@@ -66,7 +63,6 @@ function Contact() {
         </Toolbar>
       </AppBar>
 
-      {/* Drawer for mobile navigation */}
       <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer}>
         <List>
           <ListItem button component={Link} to="/" onClick={toggleDrawer}>
@@ -81,7 +77,6 @@ function Contact() {
         </List>
       </Drawer>
 
-      {/* Contact Form */}
       <Typography variant="h4" align="center" gutterBottom>Get in Touch</Typography>
 
       <form ref={form} onSubmit={sendEmail} noValidate autoComplete="off">
@@ -138,6 +133,7 @@ function Contact() {
           </Button>
         </Box>
       </form>
+      <Footer/>
     </Container>
   );
 }
