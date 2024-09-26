@@ -3,12 +3,14 @@ import emailjs from 'emailjs-com';
 import { Link } from 'react-router-dom';
 import { Container, TextField, Button, Typography, Box, AppBar, IconButton, Toolbar, Link as MuiLink, Drawer, List, ListItem, ListItemText, useMediaQuery } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import { useTheme } from '@mui/material/styles'; // Import useTheme hook
 import logo from '../assets/temp.png';
 
 function Contact() {
   const form = useRef();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const isMobile = useMediaQuery('(max-width:600px)');
+  const theme = useTheme(); // Access the theme
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -50,13 +52,13 @@ function Contact() {
             </IconButton>
           ) : (
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <MuiLink component={Link} to="/" sx={{ mx: 2, color: 'black', textDecoration: 'none' }}>
+              <MuiLink component={Link} to="/" sx={{ mx: 2, color: theme.palette.text.primary, textDecoration: 'none' }}>
                 <Typography variant="h6">Me</Typography>
               </MuiLink>
-              <MuiLink component={Link} to="/projects" sx={{ mx: 2, color: 'black', textDecoration: 'none' }}>
+              <MuiLink component={Link} to="/projects" sx={{ mx: 2, color: theme.palette.text.primary, textDecoration: 'none' }}>
                 <Typography variant="h6">Projects</Typography>
               </MuiLink>
-              <MuiLink component={Link} to="/contact" sx={{ mx: 2, color: 'black', textDecoration: 'none' }}>
+              <MuiLink component={Link} to="/contact" sx={{ mx: 2, color: theme.palette.text.primary, textDecoration: 'none' }}>
                 <Typography variant="h6">Contact</Typography>
               </MuiLink>
             </Box>
@@ -68,13 +70,13 @@ function Contact() {
       <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer}>
         <List>
           <ListItem button component={Link} to="/" onClick={toggleDrawer}>
-            <ListItemText primary="Me" sx={{ color: 'black' }} />
+            <ListItemText primary="Me" sx={{ color: theme.palette.text.primary }} />
           </ListItem>
           <ListItem button component={Link} to="/projects" onClick={toggleDrawer}>
-            <ListItemText primary="Projects" sx={{ color: 'black' }} />
+            <ListItemText primary="Projects" sx={{ color: theme.palette.text.primary }} />
           </ListItem>
           <ListItem button component={Link} to="/contact" onClick={toggleDrawer}>
-            <ListItemText primary="Contact" sx={{ color: 'black' }} />
+            <ListItemText primary="Contact" sx={{ color: theme.palette.text.primary }} />
           </ListItem>
         </List>
       </Drawer>
@@ -125,10 +127,10 @@ function Contact() {
             fullWidth
             sx={{
               py: 1,
-              backgroundColor: 'black',
-              color: 'white',
+              backgroundColor: theme.palette.primary.main,
+              color: theme.palette.text.secondary,
               '&:hover': {
-                backgroundColor: 'darkgrey',
+                backgroundColor: theme.palette.secondary.main,
               },
             }}
           >

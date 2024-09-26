@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom';
 import { AppBar, Toolbar, IconButton, Typography, Link as MuiLink, Container, Table, TableBody, TableFooter, TableCell, TableContainer, TableHead, TableRow, Paper, Button, Box, Drawer, List, ListItem, ListItemText, useMediaQuery } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import logo from '../assets/temp.png';
-import { CenterFocusStrong } from '@mui/icons-material';
+import { useTheme } from '@mui/material/styles';
 
 function Projects() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const isMobile = useMediaQuery('(max-width:600px)');
+  const theme = useTheme();
 
   const projectData = [
     { name: 'Virtual Keyboard', description: 'A virtual keyboard controlled by hand gesture controls using Python', repoLink: 'https://github.com/YeMyat144/virtual_keyboard' },
@@ -44,13 +45,13 @@ function Projects() {
             </IconButton>
           ) : (
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <MuiLink component={Link} to="/" sx={{ mx: 2, color: 'black', textDecoration: 'none' }}>
+              <MuiLink component={Link} to="/" sx={{ mx: 2, color: theme.palette.text.primary, textDecoration: 'none' }}>
                 <Typography variant="h6">Me</Typography>
               </MuiLink>
-              <MuiLink component={Link} to="/projects" sx={{ mx: 2, color: 'black', textDecoration: 'none' }}>
+              <MuiLink component={Link} to="/projects" sx={{ mx: 2, color: theme.palette.text.primary, textDecoration: 'none' }}>
                 <Typography variant="h6">Projects</Typography>
               </MuiLink>
-              <MuiLink component={Link} to="/contact" sx={{ mx: 2, color: 'black', textDecoration: 'none' }}>
+              <MuiLink component={Link} to="/contact" sx={{ mx: 2, color: theme.palette.text.primary, textDecoration: 'none' }}>
                 <Typography variant="h6">Contact</Typography>
               </MuiLink>
             </Box>
@@ -61,20 +62,20 @@ function Projects() {
       <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer}>
         <List>
           <ListItem button component={Link} to="/" onClick={toggleDrawer}>
-            <ListItemText primary="Me" sx={{ color: 'black' }} />
+            <ListItemText primary="Me" sx={{ color: theme.palette.text.primary }} />
           </ListItem>
           <ListItem button component={Link} to="/projects" onClick={toggleDrawer}>
-            <ListItemText primary="Projects" sx={{ color: 'black' }} />
+            <ListItemText primary="Projects" sx={{ color: theme.palette.text.primary }} />
           </ListItem>
           <ListItem button component={Link} to="/contact" onClick={toggleDrawer}>
-            <ListItemText primary="Contact" sx={{ color: 'black' }} />
+            <ListItemText primary="Contact" sx={{ color: theme.palette.text.primary }} />
           </ListItem>
         </List>
       </Drawer>
 
       <Typography variant="h4" align="center" gutterBottom>My Projects</Typography>
       
-      <TableContainer component={Paper} sx={{ boxShadow: 3 }}>
+      <TableContainer component={Paper} sx={{ boxShadow: theme.shadows[3] }}>
         <Table>
           <TableHead>
             <TableRow>
@@ -96,11 +97,11 @@ function Projects() {
                     target="_blank"
                     rel="noopener noreferrer"
                     sx={{
-                      borderColor: 'black',
-                      color: 'black',
+                      borderColor: theme.palette.primary.main,
+                      color: theme.palette.primary.main,
                       '&:hover': {
-                        borderColor: 'darkgrey',
-                        color: 'darkgrey',
+                        borderColor: theme.palette.secondary.main,
+                        color: theme.palette.secondary.main,
                       }
                     }}
                   >
@@ -112,7 +113,7 @@ function Projects() {
           </TableBody>
           <TableFooter>
             <TableRow>
-              <TableCell colSpan={3} align="center" sx={{ py: 3, color: 'text.secondary' }}>
+              <TableCell colSpan={3} align="center" sx={{ py: 3, color: theme.palette.text.secondary }}>
                 <Typography variant="body2">Coming soon...</Typography>
               </TableCell>
             </TableRow>
