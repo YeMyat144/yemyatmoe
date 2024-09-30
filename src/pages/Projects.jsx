@@ -11,7 +11,7 @@ function Projects() {
     { name: 'Tale&Twist', description: 'Branching narratives where user choose that influence the story outcome', repoLink: 'https://github.com/YeMyat144/talentwist' },
     { name: 'Virtual Keyboard', description: 'A virtual keyboard controlled by hand gesture controls using Python', repoLink: 'https://github.com/YeMyat144/virtual_keyboard' },
     { name: 'Gallery', description: 'Use Electron to build a gallery cross-platform application', repoLink: 'https://github.com/YeMyat144/Electron_Gallery' },
-    { name: 'Yolo', description: 'An e-commerce website', repoLink: 'https://github.com/yourusername/project-three' },
+    { name: 'Yolo', description: 'An e-commerce website', repoLink: 'https://github.com/YeMyat144/YOLO' },
     { name: 'Ganja', description: 'A shopping website for ganja using JavaScript', repoLink: 'https://github.com/YeMyat144/Menu_Page_javascript' },
     { name: 'HangMan Game', description: 'A word-finding game using TypeScript', repoLink: 'https://github.com/YeMyat144/Typescript' },
   ];
