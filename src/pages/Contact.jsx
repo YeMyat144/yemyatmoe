@@ -89,6 +89,7 @@ function Contact() {
           </Button>
         </Box>
       </form>
+      <br />
       <Footer/>
     </Container>
   );

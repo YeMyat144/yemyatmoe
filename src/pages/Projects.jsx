@@ -9,9 +9,10 @@ function Projects() {
 
   const projectData = [
     { name: 'Tale&Twist', description: 'Branching narratives where user choose that influence the story outcome', repoLink: 'https://talentwist.vercel.app' },
+    { name: 'TicketTango', description: 'An online system for booking cinema tickets ft. JuzBird, M3 ', repoLink: 'https://ticket-tango.vercel.app/'},
     { name: 'Virtual Keyboard', description: 'A virtual keyboard controlled by hand gesture controls using Python', repoLink: 'https://github.com/YeMyat144/virtual_keyboard' },
-    { name: 'Yolo', description: 'An e-commerce website', repoLink: 'https://github.com/YeMyat144/YOLO' },
-    { name: 'Ganja', description: 'A shopping website for ganja using JavaScript', repoLink: 'https://github.com/YeMyat144/Menu_Page_javascript' },
+    { name: 'Yolo', description: 'An e-commerce website', repoLink: 'https://yemyat144.github.io/YOLO/' },
+    { name: 'TheTrend', description: 'A shopping website for ganja using JavaScript', repoLink: 'https://yemyat144.github.io/menu_page/' },
   ];
 
   return (
