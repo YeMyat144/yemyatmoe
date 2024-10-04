@@ -8,7 +8,7 @@ import Footer from './Footer';
 function Projects() {
 
   const projectData = [
-    { name: 'Tale&Twist', description: 'Branching narratives where user choose that influence the story outcome', repoLink: 'https://github.com/YeMyat144/talentwist' },
+    { name: 'Tale&Twist', description: 'Branching narratives where user choose that influence the story outcome', repoLink: 'https://talentwist.vercel.app' },
     { name: 'Virtual Keyboard', description: 'A virtual keyboard controlled by hand gesture controls using Python', repoLink: 'https://github.com/YeMyat144/virtual_keyboard' },
     { name: 'Gallery', description: 'Use Electron to build a gallery cross-platform application', repoLink: 'https://github.com/YeMyat144/Electron_Gallery' },
     { name: 'Yolo', description: 'An e-commerce website', repoLink: 'https://github.com/YeMyat144/YOLO' },
