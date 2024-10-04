@@ -8,7 +8,7 @@ import theme from './pages/theme';
 function App() {  
   return (  
     <Router>  
-      <div style={{ backgroundColor: theme.palette.text.main}}>  
+      <div style={{ height: '100vh', backgroundColor: theme.palette.text.main}}>  
         <Routes>  
           <Route path="/" element={<AboutMe />} />  
           <Route path="/projects" element={<Projects />} />  

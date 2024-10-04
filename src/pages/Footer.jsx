@@ -8,8 +8,6 @@ const Footer = () => {
   return (
     <Box 
       sx={{
-        bgcolor: theme.palette.background.default,
-        color: theme.palette.text.primary,
         p: 3,
         textAlign: 'center',
         position: 'relative',
@@ -17,7 +15,7 @@ const Footer = () => {
         width: '100%',
       }}
     >
-        <br />
+      <br />
       <Typography variant="body2" gutterBottom>
         © {new Date().getFullYear()} Ye Myat Moe. All rights reserved.
       </Typography>

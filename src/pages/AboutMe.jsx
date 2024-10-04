@@ -16,13 +16,12 @@ function AboutMe() {
 
       <Container maxWidth="md" sx={{ mt: 4, textAlign: 'center' }}>
         <Avatar src={myPicture} alt="My Picture" sx={{ width: 150, height: 150, mx: 'auto', mb: 4 }} />
-        <Typography variant="h4" component="h2" color="text.dark" gutterBottom sx={{ width: 200, mx: 'auto', mb: 4 }}>
+        <Typography variant="h5" component="h4" gutterBottom sx={{ width: 200, mx: 'auto', mb: 4 }}>
           Ye Myat Moe
-          <br />
-          <Typography variant="h6" color={theme.palette.text.primary} sx={{ width: 150, mx: 'auto', mb: 4 }}>
-            Web Developer
-          </Typography>
         </Typography>
+        <Typography variant="body1" color={theme.palette.text.primary} sx={{ width: 800, mx: 'auto', mb: 4 }}>
+            I am a web developer with a passion for creating beautiful and functional websites. I have experience in both front-end and back-end development, and I am always looking for new challenges to expand my skills.
+          </Typography>
 
         <Box sx={{ display: 'flex', justifyContent: 'center', mb: 4 }}>
           <IconButton href="https://github.com/yemyat144" aria-label="GitHub">
