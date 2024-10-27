@@ -11,6 +11,7 @@ const theme = createTheme({
     text: {
       primary: '#000000', // Black for text
       secondary: '#ffffff', // White for text
+      blue: '#0000ff', // Blue for text
     },
     background: {
       default: '#000000', // Background color

@@ -1,10 +1,7 @@
 import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
-import { Link } from 'react-router-dom';
-import { Container, TextField, Button, Typography, Box, AppBar, IconButton, Toolbar, Link as MuiLink, Drawer, List, ListItem, ListItemText, useMediaQuery } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
+import { Container, IconButton, TextField, Button, Typography, Box, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import logo from '../assets/temp.png';
 import theme from './theme';
 import Footer from './Footer';
 import Header from './Header';
@@ -30,68 +27,78 @@ function Contact() {
   };
 
   return (
-    <Container>
-      <Header/>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        minHeight: '100vh',
+      }}
+    >
+      <Header />
 
-      <Typography variant="h4" align="center" gutterBottom>Get in Touch</Typography>
+      <Container sx={{ flex: 1, py: 4 }}>
+        <Typography variant="h4" align="center" gutterBottom>
+          Get in Touch
+        </Typography>
 
-      <form ref={form} onSubmit={sendEmail} noValidate autoComplete="off">
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            maxWidth: '600px',
-            mx: 'auto',
-          }}
-        >
-          <TextField
-            label="Name"
-            name="user_name"
-            variant="outlined"
-            fullWidth
-            required
-            sx={{ mb: 3 }}
-          />
-          <TextField
-            label="Email"
-            name="user_email"
-            type="email"
-            variant="outlined"
-            fullWidth
-            required
-            sx={{ mb: 3 }}
-          />
-          <TextField
-            label="Message"
-            name="message"
-            variant="outlined"
-            multiline
-            rows={5}
-            fullWidth
-            required
-            sx={{ mb: 4 }}
-          />
-          <Button
-            variant="contained"
-            type="submit"
-            fullWidth
+        <form ref={form} onSubmit={sendEmail} noValidate autoComplete="off">
+          <Box
             sx={{
-              py: 1,
-              backgroundColor: theme.palette.primary.main,
-              color: theme.palette.text.secondary,
-              '&:hover': {
-                backgroundColor: theme.palette.secondary.main,
-              },
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              maxWidth: '600px',
+              mx: 'auto',
             }}
           >
-            Submit
-          </Button>
-        </Box>
-      </form>
-      <br />
-      <Footer/>
-    </Container>
+            <TextField
+              label="Name"
+              name="user_name"
+              variant="outlined"
+              fullWidth
+              required
+              sx={{ mb: 3 }}
+            />
+            <TextField
+              label="Email"
+              name="user_email"
+              type="email"
+              variant="outlined"
+              fullWidth
+              required
+              sx={{ mb: 3 }}
+            />
+            <TextField
+              label="Message"
+              name="message"
+              variant="outlined"
+              multiline
+              rows={5}
+              fullWidth
+              required
+              sx={{ mb: 4 }}
+            />
+            <Button
+              variant="contained"
+              type="submit"
+              fullWidth
+              sx={{
+                py: 1,
+                backgroundColor: theme.palette.primary.main,
+                color: theme.palette.text.secondary,
+                '&:hover': {
+                  backgroundColor: theme.palette.secondary.main,
+                },
+              }}
+            >
+              Submit
+            </Button>
+          </Box>
+        </form>
+      </Container>
+
+      <Footer />
+    </Box>
   );
 }
 
