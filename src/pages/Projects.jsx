@@ -23,7 +23,7 @@ function Projects() {
     >
       <Header />
 
-      <Container sx={{ flex: 1, py: 4 }}>
+      <Container sx={{ flex: 1, py: 1 }}>
         <Typography variant="h4" align="center" gutterBottom>
           My Projects
         </Typography>

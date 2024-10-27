@@ -21,7 +21,7 @@ function AboutMe() {
         sx={{
           textAlign: 'center',
           flex: 1, // Makes content container take available space above the footer
-          py: 4,
+          py: 1,
         }}
       >
         <Avatar src={myPicture} alt="My Picture" sx={{ width: 150, height: 150, mx: 'auto', mb: 4 }} />
