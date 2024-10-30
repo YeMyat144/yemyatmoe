@@ -6,15 +6,16 @@ const theme = createTheme({
       main: '#000000', // Black
     },
     secondary: {
-      main: '#757575', // Dark Grey
+      main: '#2E8B57', // green
     },
     text: {
-      primary: '#000000', // Black for text
-      secondary: '#ffffff', // White for text
-      blue: '#0000ff', // Blue for text
+      primary: 'pink', // white
+      secondary: '#FFFFFF', // White for text
+      blue: '#0000ff', // Blue 
+      main: '#2E8B57',
     },
     background: {
-      default: '#000000', // Background color
+      default: '#1C1C2A', // Background color
     },
   },
   typography: {

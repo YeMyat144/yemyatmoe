@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
-import { Container, IconButton, TextField, Button, Typography, Box, useMediaQuery } from '@mui/material';
+import { IconButton, TextField, Button, Typography, Box, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import theme from './theme';
 import Footer from './Footer';
@@ -32,12 +32,13 @@ function Contact() {
         display: 'flex',
         flexDirection: 'column',
         minHeight: '100vh',
+        bgcolor: theme.palette.background.default,
       }}
     >
       <Header />
 
-      <Container sx={{ flex: 1, py: 1}}>
-        <Typography variant="h4" align="center" gutterBottom>
+      <Box sx={{ flex: 1, py: 1}}>
+        <Typography variant="h4" align="center" color='white' gutterBottom>
           Get in Touch
         </Typography>
 
@@ -84,7 +85,7 @@ function Contact() {
               fullWidth
               sx={{
                 py: 1,
-                backgroundColor: theme.palette.primary.main,
+                backgroundColor: theme.palette.secondary.main,
                 color: theme.palette.text.secondary,
                 '&:hover': {
                   backgroundColor: theme.palette.secondary.main,
@@ -95,7 +96,7 @@ function Contact() {
             </Button>
           </Box>
         </form>
-      </Container>
+      </Box>
 
       <Footer />
     </Box>

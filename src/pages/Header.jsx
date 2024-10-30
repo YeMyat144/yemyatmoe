@@ -31,7 +31,7 @@ const Header = () => {
             <>
               <IconButton
                 edge="start"
-                color="inherit"
+                color="primary"
                 aria-label="menu"
                 onClick={toggleDrawer}
               >
@@ -58,7 +58,7 @@ const Header = () => {
                 to="/"
                 sx={{
                   mx: 2,
-                  color: isActive('/') ? theme.palette.text.primary : theme.palette.text.primary,
+                  color: isActive('/') ? theme.palette.text.main : theme.palette.text.main,
                   textDecoration: isActive('/') ? 'underline' : 'none',
                 }}
               >
@@ -69,7 +69,7 @@ const Header = () => {
                 to="/projects"
                 sx={{
                   mx: 2,
-                  color: isActive('/projects') ? theme.palette.text.primary : theme.palette.text.primary,
+                  color: isActive('/projects') ? theme.palette.text.main : theme.palette.text.main,
                   textDecoration: isActive('/projects') ? 'underline' : 'none',
                 }}
               >
@@ -80,7 +80,7 @@ const Header = () => {
                 to="/contact"
                 sx={{
                   mx: 2,
-                  color: isActive('/contact') ? theme.palette.text.primary : theme.palette.text.primary,
+                  color: isActive('/contact') ? theme.palette.text.main : theme.palette.text.main,
                   textDecoration: isActive('/contact') ? 'underline' : 'none',
                 }}
               >

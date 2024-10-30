@@ -13,19 +13,20 @@ function AboutMe() {
         display: 'flex',
         flexDirection: 'column',
         minHeight: '100vh', // Full viewport height
+        bgcolor: theme.palette.background.default,
       }}
     >
       <Header />
 
-      <Container
+      <Box
         sx={{
           textAlign: 'center',
-          flex: 1, // Makes content container take available space above the footer
+          flex: 1, 
           py: 1,
         }}
       >
         <Avatar src={myPicture} alt="My Picture" sx={{ width: 150, height: 150, mx: 'auto', mb: 4 }} />
-        <Typography variant="h4" component="h4" gutterBottom>
+        <Typography variant="h4" color={theme.palette.text.main} component="h4" gutterBottom>
           Ye Myat Moe
         </Typography>
         <Typography variant="h6" color={theme.palette.text.primary} sx={{ width: '70%', mx: 'auto', mb: 4 }}>
@@ -41,7 +42,7 @@ function AboutMe() {
             textTransform: 'none',
             width: 178,
             mb: 4,
-            backgroundColor: theme.palette.primary.main,
+            backgroundColor: theme.palette.secondary.main,
             color: theme.palette.text.secondary,
             '&:hover': {
               backgroundColor: theme.palette.secondary.main,
@@ -50,7 +51,7 @@ function AboutMe() {
         >
           Download Resume
         </Button>
-      </Container>
+      </Box>
 
       <Footer />
     </Box>
