@@ -32,13 +32,13 @@ function Contact() {
         display: 'flex',
         flexDirection: 'column',
         minHeight: '100vh',
-        bgcolor: theme.palette.background.default,
+        bgcolor: theme.palette.text.secondary,
       }}
     >
       <Header />
 
       <Box sx={{ flex: 1, py: 1}}>
-        <Typography variant="h4" align="center" color='white' gutterBottom>
+        <Typography variant="h4" align="center" gutterBottom>
           Get in Touch
         </Typography>
 
@@ -85,10 +85,10 @@ function Contact() {
               fullWidth
               sx={{
                 py: 1,
-                backgroundColor: theme.palette.secondary.main,
+                backgroundColor: theme.palette.text.primary,
                 color: theme.palette.text.secondary,
                 '&:hover': {
-                  backgroundColor: theme.palette.secondary.main,
+                  backgroundColor: theme.palette.text.blue,
                 },
               }}
             >

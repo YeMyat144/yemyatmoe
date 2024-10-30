@@ -9,10 +9,10 @@ const theme = createTheme({
       main: '#2E8B57', // green
     },
     text: {
-      primary: 'pink', // white
-      secondary: '#FFFFFF', // White for text
-      blue: '#0000ff', // Blue 
-      main: '#2E8B57',
+      primary: '#000000', // white
+      secondary: '#FEFEFE', // White for text
+      blue: '#a7a7a7', // Blue 
+      main: '#1C1C2A',
     },
     background: {
       default: '#1C1C2A', // Background color

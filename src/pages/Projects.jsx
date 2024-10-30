@@ -19,13 +19,13 @@ function Projects() {
         display: 'flex',
         flexDirection: 'column',
         minHeight: '100vh',
-        bgcolor: theme.palette.background.default,
+        bgcolor: theme.palette.text.secondary,
       }}
     >
       <Header />
 
       <Box sx={{ flex: 1, py: 1 }}>
-        <Typography variant="h4" color='white' align="center" gutterBottom>
+        <Typography variant="h4" align="center" gutterBottom>
           My Projects
         </Typography>
 
@@ -46,14 +46,15 @@ function Projects() {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
-                bgcolor: theme.palette.background.default,
+                height: '13rem',
+                bgcolor: theme.palette.text.secondary,
               }}
             >
               <CardContent>
                 <Typography variant="h6" component="div" color={theme.palette.text.primary} gutterBottom>
                   {project.name}
                 </Typography>
-                <Typography variant="body2" color="white">
+                <Typography variant="body2" color={theme.palette.text.primary}>
                   {project.description}
                 </Typography>
               </CardContent>
