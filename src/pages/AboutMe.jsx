@@ -12,7 +12,7 @@ function AboutMe() {
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        minHeight: '100vh', // Full viewport height
+        minHeight: '100vh', 
         bgcolor: theme.palette.text.secondary,
       }}
     >
@@ -29,7 +29,7 @@ function AboutMe() {
         <Typography variant="h4" color={theme.palette.text.main} component="h4" gutterBottom>
           Ye Myat Moe
         </Typography>
-        <Typography variant="h6" color={theme.palette.text.primary} sx={{ width: '60%', mx: 'auto', mb: 4 }}>
+        <Typography variant="h6" color={theme.palette.text.primary} sx={{ width: '70%', mx: 'auto', mb: 4 }}>
           I am a web developer with a passion for creating beautiful and functional websites. I have experience in both front-end and back-end development, and I am always looking for new challenges to expand my skills.
         </Typography>
 

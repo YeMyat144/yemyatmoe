@@ -8,8 +8,9 @@ function Projects() {
   const projectData = [
     { name: 'Tale&Twist', description: 'Branching narratives where user choices influence the story outcome', repoLink: 'https://talentwist.vercel.app' },
     { name: 'TicketTango', description: 'An online system for booking cinema tickets featuring JuzBird, M3', repoLink: 'https://ticket-tango.vercel.app/' },
+    { name: 'TaskCard', description: 'A task board with customizable columns and draggable cards. Each task card can include titles', repoLink: 'https://task-card-trello.netlify.app/' },
     { name: 'Virtual Keyboard', description: 'A virtual keyboard controlled by hand gestures using Python', repoLink: 'https://github.com/YeMyat144/virtual_keyboard' },
-    { name: 'Yolo', description: 'An e-commerce website', repoLink: 'https://yemyat144.github.io/YOLO/' },
+    { name: 'TrueTrack', description: 'A tracker app helping users manage their finances by tracking income, expenses, and overall balance', repoLink: 'https://yemyat144.github.io/YOLO/' },
     { name: 'TheTrend', description: 'A shopping website for ganja using JavaScript', repoLink: 'https://yemyat144.github.io/menu_page/' },
   ];
 
@@ -33,7 +34,7 @@ function Projects() {
           sx={{
             display: 'flex',
             flexWrap: 'wrap',
-            gap: 3,
+            gap: 2,
             mt: 4,
           }}
         >
@@ -46,7 +47,7 @@ function Projects() {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
-                height: '13rem',
+                height: '11rem',
                 bgcolor: theme.palette.text.secondary,
               }}
             >
@@ -66,12 +67,8 @@ function Projects() {
                   target="_blank"
                   rel="noopener noreferrer"
                   sx={{
-                    borderColor: theme.palette.primary.main,
-                    color: theme.palette.primary.main,
-                    '&:hover': {
-                      borderColor: theme.palette.secondary.main,
-                      color: theme.palette.secondary.main,
-                    },
+                    border: 'none',
+                    color: theme.palette.secondary.main,
                   }}
                 >
                   View
