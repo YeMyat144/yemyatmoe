@@ -1,83 +1,161 @@
-import React from 'react';  
-import { Container, Typography, Button, Box, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';  
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';  
-import Header from './Header';  
-import theme from './theme';  
-import Footer from './Footer';  
+import React from 'react';
+import { 
+  Container, 
+  Typography, 
+  Button, 
+  Box, 
+  Grid, 
+  Card, 
+  CardContent, 
+  CardActions, 
+  Chip,
+  ThemeProvider, 
+  createTheme, 
+  responsiveFontSizes
+} from '@mui/material';
+import { fontSize, fontStyle, fontWeight, styled } from '@mui/system';
+import { Launch as LaunchIcon } from '@mui/icons-material';
+import Header from './Header';
+import Footer from './Footer';
 
-function Projects() {  
-  const projectData = [  
-    { name: 'Tale&Twist', description: 'Branching narratives where user choices influence the story outcome', repoLink: 'https://talentwist.vercel.app' },  
-    { name: 'TicketTango', description: 'An online system for booking cinema tickets featuring JuzBird, M3', repoLink: 'https://ticket-tango.vercel.app/' },  
-    { name: 'TaskCard', description: 'A task board with customizable columns and draggable cards. Each task card can include titles', repoLink: 'https://task-card-trello.netlify.app/' },  
-    { name: 'Virtual Keyboard', description: 'A virtual keyboard controlled by hand gestures using Python', repoLink: 'https://github.com/YeMyat144/virtual_keyboard' },  
-    { name: 'TrueTrack', description: 'A tracker app helping users manage their finances by tracking income, expenses, and overall balance', repoLink: 'https://yemyat144.github.io/YOLO/' },  
-    { name: 'TheTrend', description: 'A shopping website for ganja using JavaScript', repoLink: 'https://yemyat144.github.io/menu_page/' },  
-  ];  
+let theme = createTheme({
+  palette: {
+    primary: {
+      main: '#000',
+    },
+    secondary: {
+      main: '#000000',
+    },
+    background: {
+      default: '#f5f5f5',
+      paper: '#ffffff',
+    },
+  },
+  typography: {
+    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    h4: {
+      fontWeight: 700,
+    },
+    h6: {
+      fontWeight: 500,
+    },
+  },
+});
 
-  return (  
-    <Box  
-      sx={{  
-        display: 'flex',  
-        flexDirection: 'column',  
-        minHeight: '100vh',  
-        bgcolor: theme.palette.text.secondary,  
-      }}  
-    >  
-      <Header />  
+theme = responsiveFontSizes(theme);
 
-      <Box sx={{ flex: 1, py: 1 }}>  
-        <Typography variant="h4" align="center" gutterBottom>  
-          My Projects  
-        </Typography>  
+const StyledCard = styled(Card)(({ theme }) => ({
+  height: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
+  '&:hover': {
+    transform: 'translateY(-5px)',
+    boxShadow: theme.shadows[4],
+  },
+}));
 
-        <TableContainer component={Paper} sx={{ marginTop: 4 }}>  
-          <Table>  
-            <TableHead>  
-              <TableRow>  
-                <TableCell><Typography variant="h6">Project Name</Typography></TableCell>  
-                <TableCell><Typography variant="h6">Description</Typography></TableCell>  
-                <TableCell><Typography variant="h6">Link</Typography></TableCell>  
-              </TableRow>  
-            </TableHead>  
-            <TableBody>  
-              {projectData.map((project, index) => (  
-                <TableRow key={index}>  
-                  <TableCell>  
-                    <Typography variant="body1" color={theme.palette.text.primary}>  
-                      {project.name}  
-                    </Typography>  
-                  </TableCell>  
-                  <TableCell>  
-                    <Typography variant="body1" color={theme.palette.text.primary}>  
-                      {project.description}  
-                    </Typography>  
-                  </TableCell>  
-                  <TableCell >  
-                    <Button  
-                      variant="outlined"  
-                      component="a"  
-                      href={project.repoLink}  
-                      target="_blank"  
-                      rel="noopener noreferrer"  
-                      sx={{  
-                        border: 'none',  
-                        color: theme.palette.secondary.main,  
-                      }}  
-                    >  
-                      <ArrowForwardIcon />  
-                    </Button>  
-                  </TableCell>  
-                </TableRow>  
-              ))}  
-            </TableBody>  
-          </Table>  
-        </TableContainer>  
-      </Box>  
+const StyledChip = styled(Chip)(({ theme }) => ({
+  margin: theme.spacing(0.5),
+}));
 
-      <Footer />  
-    </Box>  
-  );  
-}  
+function Projects() {
+  const projectData = [
+    { 
+      name: 'Tale&Twist', 
+      description: 'Branching narratives where user choices influence the story outcome', 
+      repoLink: 'https://talentwist.vercel.app',
+      tags: ['React', 'Next.js', 'Vercel']
+    },
+    { 
+      name: 'TicketTango', 
+      description: 'An online system for booking cinema tickets featuring JuzBird, M3', 
+      repoLink: 'https://ticket-tango.vercel.app/',
+      tags: ['React', 'Node.js', 'MongoDB']
+    },
+    { 
+      name: 'TaskCard', 
+      description: 'A task board with customizable columns and draggable cards. Each task card can include titles', 
+      repoLink: 'https://task-card-trello.netlify.app/',
+      tags: ['React', 'DnD', 'Netlify']
+    },
+    { 
+      name: 'Virtual Keyboard', 
+      description: 'A virtual keyboard controlled by hand gestures using Python', 
+      repoLink: 'https://github.com/YeMyat144/virtual_keyboard',
+      tags: ['Python', 'OpenCV', 'Machine Learning']
+    },
+    { 
+      name: 'TrueTrack', 
+      description: 'A tracker app helping users manage their finances by tracking income, expenses, and overall balance', 
+      repoLink: 'https://yemyat144.github.io/YOLO/',
+      tags: ['JavaScript', 'HTML', 'CSS']
+    },
+    { 
+      name: 'TheTrend', 
+      description: 'A shopping website for ganja using JavaScript', 
+      repoLink: 'https://yemyat144.github.io/menu_page/',
+      tags: ['JavaScript', 'HTML', 'CSS']
+    },
+  ];
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          minHeight: '100vh',
+          bgcolor: 'background.default',
+        }}
+      >
+        <Header />
+
+        <Box sx={{ flex: 1,mt:5, py: 1, mr:10, ml: 10 }}>
+          <Typography variant="h4" align="center" gutterBottom color="secondary">
+            My Projects
+          </Typography>
+
+          <Grid container spacing={4} sx={{ mt: 2 }}>
+            {projectData.map((project, index) => (
+              <Grid item xs={12} sm={6} md={4} key={index}>
+                <StyledCard>
+                  <CardContent>
+                    <Typography variant="h6" gutterBottom>
+                      {project.name}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary" paragraph>
+                      {project.description}
+                    </Typography>
+                    <Box>
+                      {project.tags.map((tag, tagIndex) => (
+                        <StyledChip key={tagIndex} label={tag} size="small" />
+                      ))}
+                    </Box>
+                  </CardContent>
+                  <CardActions sx={{ mt: 'auto' }}>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      endIcon={<LaunchIcon />}
+                      href={project.repoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      fullWidth
+                    >
+                      View Project
+                    </Button>
+                  </CardActions>
+                </StyledCard>
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
+
+        <Footer />
+      </Box>
+    </ThemeProvider>
+  );
+}
 
 export default Projects;
