@@ -1,6 +1,5 @@
 import React from 'react';
 import { 
-  Container, 
   Typography, 
   Button, 
   Box, 
@@ -11,9 +10,9 @@ import {
   Chip,
   ThemeProvider, 
   createTheme, 
-  responsiveFontSizes
+  responsiveFontSizes 
 } from '@mui/material';
-import { fontSize, fontStyle, fontWeight, styled } from '@mui/system';
+import { styled } from '@mui/system';
 import { Launch as LaunchIcon } from '@mui/icons-material';
 import Header from './Header';
 import Footer from './Footer';
@@ -75,7 +74,7 @@ function Projects() {
     },
     { 
       name: 'TaskCard', 
-      description: 'A task board with customizable columns and draggable cards. Each task card can include titles', 
+      description: 'A task board with customizable columns and draggable cards.', 
       repoLink: 'https://task-card-trello.netlify.app/',
       tags: ['React', 'DnD', 'Netlify']
     },
@@ -105,24 +104,24 @@ function Projects() {
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          maxHeight: '100vh',
+          height: '100vh',
           bgcolor: 'background.default',
+          overflow: 'hidden',
         }}
       >
         <Header />
-
-        <Box sx={{ 
-          display: 'flex',
-          flexDirection: 'column',
-          height: '100vh', // Restrict to full viewport height
-          bgcolor: 'background.default',
-          overflowY: 'auto',
-        }}>
+        <Box 
+          sx={{ 
+            flex: 1, 
+            px: 2, 
+            py: 1, 
+            overflowY: 'auto',
+          }}
+        >
           <Typography variant="h4" align="center" gutterBottom color="secondary">
             My Projects
           </Typography>
-
-          <Grid container spacing={4} sx={{ mt: 2 }}>
+          <Grid container spacing={2}>
             {projectData.map((project, index) => (
               <Grid item xs={12} sm={6} md={4} key={index}>
                 <StyledCard>
@@ -139,7 +138,7 @@ function Projects() {
                       ))}
                     </Box>
                   </CardContent>
-                  <CardActions sx={{ mt: 'auto' }}>
+                  <CardActions>
                     <Button
                       variant="contained"
                       color="primary"
@@ -157,7 +156,6 @@ function Projects() {
             ))}
           </Grid>
         </Box>
-
         <Footer />
       </Box>
     </ThemeProvider>
