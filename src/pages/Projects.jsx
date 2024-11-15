@@ -105,7 +105,7 @@ function Projects() {
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          minHeight: '100vh',
+          height: '70vh',
           bgcolor: 'background.default',
         }}
       >

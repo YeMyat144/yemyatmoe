@@ -91,9 +91,9 @@ function AboutMe() {
 
   return (  
     <ThemeProvider theme={theme}>  
-      <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', bgcolor: theme.palette.background.paper }}>  
+      <Box sx={{ display: 'flex', flexDirection: 'column',height:'70vh', bgcolor: theme.palette.background.paper }}>  
         <Header sx={{ fontWeight: 'bold' }} />
-        <Box sx={{ flex: 1, py: 1, mr:10 }}>  
+        <Box sx={{ flex: 1, py: 1 }}>  
           <Fade in={true} timeout={1000}>  
             <StyledPaper elevation={3}>  
               <Grid container spacing={4} alignItems="center">  
