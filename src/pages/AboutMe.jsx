@@ -91,9 +91,18 @@ function AboutMe() {
 
   return (  
     <ThemeProvider theme={theme}>  
-      <Box sx={{ display: 'flex', flexDirection: 'column',height:'70vh', bgcolor: theme.palette.background.paper }}>  
+      <Box sx={{ display: 'flex', flexDirection: 'column', maxheight:'100vh', bgcolor: theme.palette.background.paper }}>  
         <Header sx={{ fontWeight: 'bold' }} />
-        <Box sx={{ flex: 1, py: 1 }}>  
+        <Box sx={{ 
+          flex: 1,
+          py: 0.5, // Reduced padding vertically
+          px: 2, // Added horizontal padding for better spacing
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center', // Centers the content vertically
+          alignItems: 'center', // Centers the content horizontally
+          overflowY: 'auto', 
+        }}>  
           <Fade in={true} timeout={1000}>  
             <StyledPaper elevation={3}>  
               <Grid container spacing={4} alignItems="center">  

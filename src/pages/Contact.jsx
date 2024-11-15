@@ -104,13 +104,23 @@ function Contact() {
         sx={{  
           display: 'flex',  
           flexDirection: 'column',  
-          height: '70vh',  
+          maxHeight: '100vh',  
           bgcolor: 'background.default',  
         }}  
       >  
         <Header />  
 
-        <Box sx={{ mt: 6, mr: 8, ml: 8, mb: 2, flex: 1 }}>  
+        <Box sx={{
+          mt: 3, // Reduced top margin
+          mr: 4, // Reduced right margin
+          ml: 4, // Reduced left margin
+          mb: 1, // Reduced bottom margin
+          flex: 1,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center', // Center content vertically
+          alignItems: 'center', // Center content horizontally
+        }}>  
           <Typography variant="h4" align="center" gutterBottom color="secondary">  
             Get in Touch  
           </Typography>  

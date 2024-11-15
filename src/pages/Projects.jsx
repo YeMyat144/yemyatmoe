@@ -105,13 +105,19 @@ function Projects() {
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          height: '70vh',
+          maxHeight: '100vh',
           bgcolor: 'background.default',
         }}
       >
         <Header />
 
-        <Box sx={{ flex: 1,mt:5, py: 1, mr:10, ml: 10 }}>
+        <Box sx={{ 
+          display: 'flex',
+          flexDirection: 'column',
+          height: '100vh', // Restrict to full viewport height
+          bgcolor: 'background.default',
+          overflowY: 'auto',
+        }}>
           <Typography variant="h4" align="center" gutterBottom color="secondary">
             My Projects
           </Typography>
